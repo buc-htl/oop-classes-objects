@@ -1,5 +1,6 @@
+language = "java10"
 compile = "javac -classpath .:target/dependency/* -d . $(find . -type f -name '*.java')"
-run = ["java", "-classpath", ".:target/dependency/*", "Smartphone"]
+run = ["./repl.deploy --standalone","java", "-classpath", ".:target/dependency/*", "Main"]
 
 entrypoint = "src/Smartphone.java"
 hidden = ["**/*.class"]
@@ -57,4 +58,4 @@ type = "request"
 
 [debugger.interactive.launchMessage.arguments]
 classPaths = ["."]
-mainClass = "Smartphone"
+mainClass = "Main"
